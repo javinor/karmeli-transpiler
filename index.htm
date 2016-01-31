@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <style type="text/css">
+      @font-face {
+        font-family: "Avinor";
+        src: './AvinorFonts/AvinorR2.ttf';/* format("truetype");*/
+      }
+      p.karmeli {
+        font-family: "Avinor";
+      }
+    </style>
+  </head>
+  <body ng-app='KarmeliApp'>
+    <div ng-controller='KarmeliController'>
+      <textarea ng-model="text"></textarea>
+
+      <p class="karmeli" id="test">
+        {{ text }}
+      </p>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script>
+      ;(function () {
+        angular
+          .module('KarmeliApp', [])
+          .controller('KarmeliController', KarmeliController)
+
+        function KarmeliController($scope) {
+          $scope.text = 'angular generateds sample text'
+        }
+      }());
+
+    </script>
+  </body>
+</html>
