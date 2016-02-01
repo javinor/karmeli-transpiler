@@ -14,9 +14,10 @@
     <div ng-controller='KarmeliController'>
       <textarea ng-model="text"></textarea>
 
-      <p class="karmeli">
-        {{ text }}
-      </p>
+      <p class="karmeli">{{ text }}</p>
+      <p class="karmeli">{{ toKarmeliUpper(text) }}</p>
+      <p class="karmeli">{{ toKarmeliLower(text) }}</p>
+
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
