@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <style type="text/css" src="sytle.css"></style>
+  </head>
+  <body>
+    <div class="rtl">
+      <p id="line1" class="rtl">מיכה,</p>
+      <p id="line2" class="rtl">    משכיל, נעים וחייכן</p>
+      <p id="line3" class="rtl">        אוהב שפה, מדע וטבע,</p>
+      <p id="line4" class="rtl">            ממציא הכתב הכרמלי</p>
+      </div>
+      <div>
+      <p id="line5" class="karmeli"></p>
+      <p id="line6" class="karmeli"></p>
+      <p id="line7" class="karmeli"></p>
+      <p id="line8" class="karmeli"></p>
+    </div>
+
+    <script src="epitaph/karmeli-vanilla.js"></script>
+    <script>        
+        var tab= '    '
+        document.getElementById('line5').innerHTML = l1
+        document.getElementById('line6').innerHTML = tab+l2
+        document.getElementById('line7').innerHTML = tab+tab+l3
+        document.getElementById('line8').innerHTML = tab+tab+tab+l4
+    </script>
+
+  </body>
+</html>

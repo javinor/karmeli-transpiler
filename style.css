@@ -1,0 +1,7 @@
+@font-face {
+	font-family: "Avinor";
+	src: './AvinorFonts/AvinorR2.ttf';/* format("truetype");*/
+}
+
+.karmeli { font-family: Avinor; }
+.rtl { direction: rtl; }
