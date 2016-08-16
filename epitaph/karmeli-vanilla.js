@@ -5,7 +5,7 @@ const l2 = 'Maskil, na'+'\u{00F5}'+'im w '+'\u{00E6}'+'ayxan,'
 const l3 = '\u{00C3}'+'ohev safa, madda'+'\u{00F5}'+' wa '+'\u{00FE}'+'evva'+'\u{00F5}'+','
 
 const l4 = 'Mamci'+'\u{00E3}'+' ha ktav ha karmeli'
- 
+
 
 
 const upper = {

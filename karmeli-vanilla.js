@@ -1,40 +1,14 @@
-;(function () {
-  angular
-    .module('KarmeliApp', [])
-    .controller('KarmeliController', KarmeliController)
+const l1 = 'Mixa,'
 
-  function KarmeliController($scope) {
-    $scope.text = 'שְׁלוֹם שָׁלוֹם הַתָּכְנָה נִקּוּד נִקּוֹד וּקְרִיאָה וּקְרִיאָהּ בְּעִבְרִית בָּעִבְרִית הַמֻּפְעֶלֶת בְּאֶתֶר בָּאֶתֶר בְּאַתֵּר בַּאֲתַר בַּאֲתָר בָּאֲתָר זֶה מְנַקֶּדֶת טֶקְסְט בְּעִבְרִית בָּעִבְרִית וְגַם מִשְּׁמִיעָה מַשְׁמִיעָה מַשְׁמִיעָהּ אֵת אֶת אַתְּ הַטֶּקְסְט הַמְּנַקֵּד'
-    $scope.upper = upper
-    $scope.toKarmeliUpper = toKarmeliUpper
-    $scope.toKarmeliLower = toKarmeliLower
-  }
+const l2 = 'Maskil, na'+'\u{00F5}'+'im w '+'\u{00E6}'+'ayxan,'
 
-  function toKarmeliUpper(str) {
-    return Array.prototype.map.call(str, function (c) {
-      if (upper[c])
-        return upper[c]
-      return c
-    }).join('')
-  }
+const l3 = '\u{00C3}'+'ohev safa, madda'+'\u{00F5}'+' wa '+'\u{00FE}'+'evva'+'\u{00F5}'+','
 
-  function toKarmeliLower(str) {
-    return Array.prototype.map.call(str, function (c) {
-      if (upper[c])
-        return lower[c]
-      return c
-    }).join('')
-  }
+const l4 = 'Mamci'+'\u{00E3}'+' ha ktav ha karmeli'
+ 
 
-  // TODO:
-  // קמץ קטן
-  // צירה חסר ומלא
-  // אותיות דגושות ב ו כ פ
-  // אותיות עם גרש ז צ
-  // שווא נח ונא
-  // חולם מלא \u05B9
-  // שורוק
-  const h2k_upper = {
+
+const upper = {
     '\u{05D0}': '\u{00C3}', // א
     '\u{05B8}': 'A',        // קמץ
     '\u{05B7}': 'A',        // פתח
@@ -74,27 +48,23 @@
     '\u{05B3}': '\u{00D3}'  // חטף קמץ
   }
 
-  const h2k_lower = {
+  const lower = {
+    '\u{05D0}': '\u{00E3}', // א
     '\u{05B8}': 'a',        // קמץ
     '\u{05B7}': 'a',        // פתח
-    '\u{05B6}': 'e',        // סגול
-    '\u{05B5}': 'e',        // צירי
-    '\u{05BB}': 'u',        // קובוץ
-    '\u{05B4}': 'i',        // חיריק
-    '\u{05BA}': 'o',        // חולם חסר
-    '\u{05B2}': '\u{00E1}', // חטף פתח
-    '\u{05B1}': '\u{00E9}', // חטף סגול
-    '\u{05B3}': '\u{00F3}'  // חטף קמץ
-    '\u{05D0}': '\u{00E3}', // א
     '\u{05D1}': 'v',        // ב
     '\u{05D2}': 'g',        // ג
     '\u{05D3}': 'd',        // ד
     '\u{05D4}': 'h',        // ה
+    '\u{05B6}': 'e',        // סגול
+    '\u{05B5}': 'e',        // צירי
     '\u{05D5}': 'w',        // ו
+    '\u{05BB}': 'u',        // קובוץ
     '\u{05D6}': 'z',        // ז
     '\u{05D7}': '\u{00E6}', // ח
     '\u{05D8}': '\u{00FE}', // ט
     '\u{05D9}': 'y',        // י
+    '\u{05B4}': 'i',        // חיריק
     '\u{05DA}': 'x',        // ך
     '\u{05DB}': 'x',        // כ
     '\u{05DC}': 'l',        // ל
@@ -104,6 +74,7 @@
     '\u{05E0}': 'n',        // נ
     '\u{05E1}': 's',        // ס
     '\u{05E2}': '\u{00F5}', // ע
+    '\u{05BA}': 'o',        // חולם חסר
     '\u{05E3}': 'f',        // ף
     '\u{05E4}': 'f',        // פ
     '\u{05E5}': 'c',        // ץ
@@ -112,6 +83,7 @@
     '\u{05E8}': 'r',        // ר
     '\u{05E9}': '\u{0161}', // ש
     '\u{05EA}': 't',        // ת
+    '\u{05B2}': '\u{00E1}', // חטף פתח
+    '\u{05B1}': '\u{00E9}', // חטף סגול
+    '\u{05B3}': '\u{00F3}'  // חטף קמץ
   }
-
-}())
