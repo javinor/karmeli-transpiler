@@ -1,29 +1,35 @@
 <html>
-  <head>
-    <style type="text/css" src="sytle.css"></style>
-  </head>
-  <body>
-    <div class="rtl">
-      <p id="line1" class="rtl">מיכה,</p>
-      <p id="line2" class="rtl">    משכיל, נעים וחייכן</p>
-      <p id="line3" class="rtl">        אוהב שפה, מדע וטבע,</p>
-      <p id="line4" class="rtl">            ממציא הכתב הכרמלי</p>
-    </div>
-    <div>
-      <p id="line5" class="karmeli"></p>
-      <p id="line6" class="karmeli"></p>
-      <p id="line7" class="karmeli"></p>
-      <p id="line8" class="karmeli"></p>
-    </div>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/virtual-keyboard/1.26.0/css/keyboard.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/virtual-keyboard/1.26.0/css/keyboard-previewkeyset.min.css">
+</head>
 
-    <script src="epitaph/karmeli-vanilla.js"></script>
-    <script>        
-        var tab= '    '
-        document.getElementById('line5').innerHTML = l1
-        document.getElementById('line6').innerHTML = tab+l2
-        document.getElementById('line7').innerHTML = tab+tab+l3
-        document.getElementById('line8').innerHTML = tab+tab+tab+l4
-    </script>
+<body>
+  <div class="rtl">
+    <p id="line1" class="rtl">מיכה,</p>
+    <p id="line2" class="rtl">    משכיל, נעים וחייכן</p>
+    <p id="line3" class="rtl">        אוהב שפה, מדע וטבע,</p>
+    <p id="line4" class="rtl">            ממציא הכתב הכרמלי</p>
+  </div>
+  <div class="karmeli">
+    <p id="line5"></p>
+    <p id="line6"></p>
+    <p id="line7"></p>
+    <p id="line8"></p>
+  </div>
 
-  </body>
+  <div id="keyboard-container" class="karmeli">
+    <textarea id="keyboard" placeholder="Enter Text..."></textarea>
+    <div id="keyboard-anchor" class="karmeli"></div>
+  </div>
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/virtual-keyboard/1.26.0/js/jquery.keyboard.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/virtual-keyboard/1.26.0/js/jquery.keyboard.extension-all.min.js"></script>
+  <script src="karmeli.js"></script>
+</body>
 </html>
